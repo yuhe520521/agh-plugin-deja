@@ -1,0 +1,52 @@
+{
+  "name": "@yuhe520521/deja",
+  "version": "0.1.1",
+  "description": "AGH Harness plugin for deja-vu: search this machine's past AI coding sessions from a local index.",
+  "type": "module",
+  "license": "MIT",
+  "exports": "./index.mjs",
+  "files": [
+    "index.mjs",
+    "lib/deja.mjs",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24.10"
+  },
+  "agnes": {
+    "plugins": [
+      {
+        "export": "dejaVu",
+        "apiRange": "^5.0.0",
+        "id": "ext:deja-vu/main",
+        "inject": [
+          "tools"
+        ],
+        "capabilities": {
+          "network": []
+        },
+        "metadata": {
+          "displayName": "Deja-vu Memory",
+          "summary": "Search past AI coding sessions on this machine.",
+          "description": "Indexes session files from various coding agents. Provides tools to recall, blame, fix, and remember past decisions.",
+          "locales": {
+            "zh-CN": {
+              "displayName": "Deja-vu 记忆",
+              "summary": "搜索本机过去的 AI 编码会话。",
+              "description": "索引来自各种编码代理的会话文件。提供召回、追溯、修复和记忆过去决策的工具。"
+            }
+          }
+        }
+      }
+    ],
+    "metadata": {
+      "displayName": "Deja-vu Memory",
+      "summary": "Search past AI coding sessions on this machine.",
+      "description": "Indexes session files from various coding agents."
+    },
+    "provides": [
+      "tool"
+    ]
+  },
+  "displayName": "Deja-vu Memory"
+}
